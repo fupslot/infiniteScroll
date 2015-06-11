@@ -1,6 +1,6 @@
 {
   "name": "angularjs-infinite-scrolling",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/fupslot/infiniteScroll",
   "authors": [
     "Eugene Brodsky <eugene.brodsky@autodesk.com>"
@@ -23,6 +23,6 @@
   ],
   "dependencies": {
     "lodash": ">=2.4.x",
-    "angularjs": ">=1.2.x"
+    "angular": ">=1.2.x"
   }
 }
