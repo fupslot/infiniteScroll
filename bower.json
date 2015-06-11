@@ -1,0 +1,27 @@
+{
+  "name": "angularjs-infinite-scrolling",
+  "version": "0.0.1",
+  "homepage": "https://github.com/fupslot/infiniteScroll",
+  "authors": [
+    "Eugene Brodsky <eugene.brodsky@autodesk.com>"
+  ],
+  "description": "AngularJs Infinite Scroll",
+  "main": "./dist/infiniteScroll.js",
+  "keywords": [
+    "AngularJS",
+    "Infinite",
+    "Scroll",
+    "Directive"
+  ],
+  "license": "GNU",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ],
+  "dependencies": {
+    "lodash": "~3.9.3"
+  }
+}
