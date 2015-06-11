@@ -20,12 +20,18 @@
 						var target = e.target;
 						var scrollValue = (target.scrollTop / (target.scrollHeight - target.clientHeight));
 						if(!waitUntilPromise && hasCallback && scrollValue >= triggerOn) {
+							// disable scroll
+							disableScroll();
 							var promise = callback();
 							if (isPromise(promise)) {
 								waitUntilPromise = true;
 								promise.finally(function(){
+									enableScroll();
 									waitUntilPromise = false;
 								});
+							}
+							else {
+								enableScroll();
 							}
 							scope.$digest();
 						}
@@ -37,6 +43,18 @@
 
 					function isPromise (promise) {
 						return promise && typeof promise.finally === 'function';
+					}
+
+					function disableScroll(){
+						el.css({
+						 	'overflow': 'hidden'
+						});
+					}
+
+					function enableScroll () {
+						el.css({
+						 	'overflow': null
+						});
 					}
 				}
 			};
