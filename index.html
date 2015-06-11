@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.box-outter {
+		position: relative;
+		width: 300px;
+	}
+	.box {
+		height: 300px;
+		border: 10px solid black;
+		margin: 20px;
+		overflow-y: scroll;
+	}
+	.loading {
+		position: absolute;
+		bottom: 10px;
+		width: 240px;
+		background-color: #f0f;
+		padding: 5px 0;
+		text-align: center;
+		margin: 0 30px;
+	}
+	</style>
+</head>
+<body ng-controller="MainCtrl as mv">
+	<div class="box-outter">
+		<div class="box" infinite-scrolling="mv.loadMoreText" infinite-scrolling-trigger-when="20">
+			<div class="content" ng-bind="mv.content"></div>
+		</div>
+		<div class="loading" ng-show="mv.loading">Loading...</div>
+	</div>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="scroll.js"></script>
+</body>
+</html>
