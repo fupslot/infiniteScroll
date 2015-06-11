@@ -22,6 +22,7 @@
     "demo"
   ],
   "dependencies": {
-    "lodash": "~3.9.3"
+    "lodash": "~2.4.1",
+    "angularjs": "~1.2.*"
   }
 }
